@@ -1,6 +1,6 @@
 # Svecial
 
-![](https://img.shields.io/github/license/Olyno/svecial.svg?style=for-the-badge)
+![npm](https://img.shields.io/npm/v/svecial.svg?style=for-the-badge) ![](https://img.shields.io/npm/dw/svecial.svg?style=for-the-badge) ![](https://img.shields.io/github/license/Olyno/svecial.svg?style=for-the-badge)
 
 # Inspirations
 
