@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "index.cd6bedb9.css",
+  "sources": [
+    "..\\..\\..\\..\\..\\..\\src\\routes\\index.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\timport GoogleButton from '../../../src/components/GoogleButton.svelte'\n\timport DiscordButton from '../../../src/components/DiscordButton.svelte'\n\timport FacebookButton from '../../../src/components/FacebookButton.svelte'\n\n\timport Collapse from '../components/Collapse.svelte'\n\timport Navbar from '../components/Navbar.svelte'\n\timport Hero from '../components/Hero.svelte'\n</script>\n\n<style>\n\th1 {color: #fff}\n</style>\n\n<section>\n\n\t<Hero>\n\t\n\t\t<div slot=\"hero-head\">\n\t\t\t<Navbar />\n\t\t</div>\n\n\t\t<div class=\"container\">\n\t\t\t<div class=\"has-text-centered\">\n\t\t\t\t<h1 class=\"title\">Svecial</h1>\n\t\t\t\t<h1 class=\"subtitle\">Be connected everywhere</h1>\n\t\t\t\t<code>npm i svecial</code>\n\t\t\t\t<br><br>\n\t\t\t\t<article class=\"message is-dark\">\n\t\t\t\t\t<div class=\"message-header\">\n\t\t\t\t\t\t<p>What's Svecial?</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"message-body\">\n\t\t\t\t\t\t<p>Svecial is a Svelte librairy with social media buttons and OAuth2 buttons. Simple to use, just put the component in your code, customize it and use it!</p>\n\t\t\t\t\t</div>\n\t\t\t\t</article>\n\t\t\t\t<br>\n\t\t\t\t<article class=\"message is-dark\">\n\t\t\t\t\t<div class=\"message-header\">\n\t\t\t\t\t\t<p>Svecial do all the OAuth 2 support?</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"message-body\">\n\t\t\t\t\t\t<p>No, Svecial do only the render of the target button and give you a response depend of which button you use</p>\n\t\t\t\t\t</div>\n\t\t\t\t</article>\n\t\t\t</div>\n\t\t</div>\n\n\t</Hero>\n\n</section>\n\n"
+  ],
+  "names": [],
+  "mappings": "AAWC,EAAE,eAAC,CAAC,KAAK,CAAE,IAAI,CAAC"
+}
