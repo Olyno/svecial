@@ -5,7 +5,7 @@ import DiscordButton from "./components/DiscordButton.svelte";
 export { GoogleButton, FacebookButton, DiscordButton };
 
 export default {
-  GoogleButton,
-  FacebookButton,
-  DiscordButton
+	GoogleButton,
+	FacebookButton,
+	DiscordButton
 };

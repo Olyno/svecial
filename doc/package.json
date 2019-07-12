@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
+    "polka": "^0.5.2",
     "sirv": "^0.4.0",
-    "polka": "^0.5.2"
+    "svecial": "^0.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

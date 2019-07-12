@@ -1,8 +1,4 @@
 <script>
-	import GoogleButton from '../../../src/components/GoogleButton.svelte'
-	import DiscordButton from '../../../src/components/DiscordButton.svelte'
-	import FacebookButton from '../../../src/components/FacebookButton.svelte'
-
 	import Collapse from '../components/Collapse.svelte'
 	import Navbar from '../components/Navbar.svelte'
 	import Hero from '../components/Hero.svelte'

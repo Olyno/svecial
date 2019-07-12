@@ -1,6 +1,6 @@
 {
   "name": "svecial",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A list of social buttons with Svelte",
   "author": "Olyno",
   "main": "index.js",
@@ -25,7 +25,7 @@
     "url": "https://github.com/Olyno/svecial/issues"
   },
   "homepage": "https://github.com/Olyno/svecial#readme",
-  "devDependencies": {
+  "dependencies": {
     "svelte": "^3.6.7"
   }
 }

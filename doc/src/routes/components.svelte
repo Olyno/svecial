@@ -2,11 +2,9 @@
 	import Navbar from '../components/Navbar.svelte';
 	import Hero from '../components/Hero.svelte';
 	import Button from '../components/Button.svelte'
-	import GoogleButton from '../../../src/components/GoogleButton.svelte'
-	import DiscordButton from '../../../src/components/DiscordButton.svelte'
-	import FacebookButton from '../../../src/components/FacebookButton.svelte'
 
 	import { onMount } from 'svelte'
+	import { GoogleButton, DiscordButton, FacebookButton } from 'svecial'
 	import { GoogleButtonInfos, FacebookButtonInfos, DiscordButtonInfos } from './_buttonsInfos';
 
 	let elements;
