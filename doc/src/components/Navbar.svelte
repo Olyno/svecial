@@ -15,7 +15,7 @@
 
 <nav class="navbar is-blue is-dark">
 	<div class="navbar-brand">
-		<a href="#!" on:click={update} class={isActive ? "navbar-burger burger is-active" : "navbar-burger burger"}>
+		<a on:click={update} class={isActive ? "navbar-burger burger is-active" : "navbar-burger burger"}>
 			<span></span>
 			<span></span>
 			<span></span>
