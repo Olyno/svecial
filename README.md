@@ -25,21 +25,9 @@ import { GoogleButton } from 'svecial'
 
 ## SSR
 
- > If you are doing server-side rendering with Sapper, ou'll need to import the .svelte files directly so that your app can compile them, rather than importing from the compiled module.
+``Svecial`` supports SSR. If you get any error when compiling, please compare your ``rollup.config.js`` file with Svecial doc's config.
 
-**Source:** [Svelma's creator](https://github.com/c0bra/svelma#ssr)
-
-i.e.:
-
-```js
-import Button from 'svecial/src/components/GoogleButton.svelte'
-```
-
-instead of
-
-```js
-import { GoogleButton } from 'svecial'
-```
+ > Special thanks to [@matyunya](https://github.com/matyunya) for taking his time to help me create the SSR part
 
 # Developpement
 
