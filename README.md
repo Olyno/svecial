@@ -23,13 +23,49 @@ Import components like:
 import { GoogleButton } from 'svecial'
 ```
 
+# API
+
+Each component/button has:
+
+ - ``appId``: It's here where you **must** to put the id of the app that you created. If the component doesn't appear, it's probably because this props is missing.
+ - ``onLoginSuccess``: It's a callback if the user has been logged with success. It will return you the response of the api as parameter (depending of which button you use, Svecial can't predict informations about it).
+ - ``onLoginFailure``: It's a callback if the user has been logged with failure. It will return you the response of the api as parameter (generally the error).
+
+Depending of which button, props are different. If we can customize easily the button, you should use ``color`` as props, else it should be ``theme``...
+
+**More informations about the api here:** https://olyno.github.io/svecial/components/
+
 ## SSR
 
 ``Svecial`` supports SSR. If you get any error when compiling, please compare your ``rollup.config.js`` file with Svecial doc's config.
 
- > Special thanks to [@matyunya](https://github.com/matyunya) for taking his time to help me create the SSR part
+ > Special thanks to [@matyunya](https://github.com/matyunya) for taking his time to help Svecial create the SSR part
 
 # Developpement
+
+## Svecial plan
+
+Here is a plan of what Svecial should contain:
+ 
+  - [x] GoogleButton
+  - [x] FacebookButton
+  - [ ] TwitterButton
+  - [x] DiscordButton
+  - [ ] GithubButton
+  - [ ] GitlabButton
+  - [ ] BitbucketButton
+  - [ ] ShareButton
+
+## What Svecial is supposed to be:
+
+ - A 0 dependencies package
+ - A easy and fast component to use (plug & play component)
+
+## What Svecial is not supposed to be:
+
+ - A librairy with backend: Svecial will return needed informations in the callback of ``onLoginSuccess`` or ``onLoginError`` but that's all. You're not supposed to make your backend directly on the component, but include the composent to your backend. 
+
+# Contributing
 
  1. Clone this repo: git clone https://github.com/Olyno/svecial.git
  2. Install dependencies: ``cd docs & npm i``
@@ -40,4 +76,4 @@ import { GoogleButton } from 'svecial'
 
 Code released under GNU license.
 
-Copyright ©, Olyno.
+Copyright ©, [Olyno](https://github.com/Olyno).
