@@ -23,8 +23,8 @@
 	</div>
 	<div class={isActive ? "navbar-menu is-active" : "navbar-menu"} id="navbar">
 		<div class="navbar-start">
-			<a href="/" class="navbar-item">Home</a>
-			<a href="/components" class="navbar-item">Components</a>
+			<a href="/svecial/" class="navbar-item">Home</a>
+			<a href="/svecial/components" class="navbar-item">Components</a>
 		</div>
 		<div class="navbar-end">
 			<div class="navbar-item">
