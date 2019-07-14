@@ -92,6 +92,7 @@
 				<div class="column">
 					<button class="button is-warning" open-modal="Facebook Button">Facebook Button</button>
 					<Button name="Facebook Button" props={FacebookButtonInfos}>
+						<h2>Facebook Button doesn't load? Check your cookies and accept cookies from facebook!</h2>
 						<pre slot="pattern" class="pattern">&lt;FacebookButton appId="my app id" /></pre>
 						<FacebookButton appId="1000227316855149" />
 					</Button>
@@ -100,7 +101,7 @@
 					<button class="button is-warning" open-modal="Discord Button">Discord Button</button>
 					<Button name="Discord Button" props={DiscordButtonInfos}>
 						<pre slot="pattern" class="pattern">&lt;DiscordButton appId="my app id" /></pre>
-						<DiscordButton />
+						<DiscordButton appId="598678534596198410" redirect="http://localhost:3000/svecial/components" />
 					</Button>
 				</div>
 			</div>

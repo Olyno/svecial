@@ -72,7 +72,7 @@
 	.is-purple { background-color: purple; color: white; }
 </style>
 
-<a href="#!" class={clazz} on:click={login}>
+<a class={clazz} on:click={login}>
 	<span class='icon'>
 		<i class='fab fa-discord fa-lg'></i>
     </span>
