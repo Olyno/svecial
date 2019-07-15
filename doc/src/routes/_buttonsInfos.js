@@ -147,7 +147,7 @@ export const DiscordButtonInfos = _default.concat([{
     description: 'The redirect url of your app',
     type: 'string',
     values: ['-'],
-    default: '/'
+    default: 'http://localhost:3000'
 }, {
     props: 'color',
     description: 'The color of the button',

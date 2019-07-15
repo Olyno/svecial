@@ -37,17 +37,6 @@
 					xfbml: true,
 					version: 'v3.3'
 				});
-			/*	FB.getLoginStatus((response) => {
-					statusChangeCallback(response);
-					onStatusChange(response);
-				});*/
-			/*	FB.ui({ method: 'login', href: 'https://developers.facebook.com/docs/' }, (response) => {
-					if (response && !response.error_message) {
-						onLoginSuccess(response);
-					} else {
-						onLoginFailure(response);
-					}
-				})*/
 			}
 		};
 
@@ -57,13 +46,13 @@
 	
 </script>
 
-<fb:login-button
-	id="fb-login-button"
-	button-type={type}
-	size={size}
-	onlogin={onLoginSuccess}
-	auto-logout-link={autoLogoutButton}
-	default-audience={audience}
-	use-continue-as={useContinueAs}
-	scope={scopes.replace(/\s/gmui, '')}
-></fb:login-button>
+<div
+    class="fb-login-button"
+	data-size={size}
+	data-onlogin={onLoginSuccess}
+	data-auto-logout-link={autoLogoutButton}
+	data-default-audience={audience}
+	data-use-continue-as={useContinueAs}
+	data-button-type={type}
+	data-scope={scopes.replace(/\s/gmui, '')}
+></div>

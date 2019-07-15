@@ -7,7 +7,7 @@
 
 	export let appId;
 	export let scopes = 'identify'; // Seperated with a comma
-	export let redirect = '/';
+	export let redirect = 'http://localhost:3000';
 	export let color = 'dark';
 	export let onLoginFailure = () => {console.log('Logged to discord with failure!')};
 	export let onLoginSuccess = () => {console.log('Logged to discord with success!')};
@@ -18,18 +18,8 @@
 	onMount(async () => {
 		scopes = scopes.toLocaleLowerCase().replace(/\s/gmui, '').split(',');
 		const script = document.createElement('script');
-		const fontawesome = document.createElement('script');
-		const bulma = document.createElement('link');
-
 		script.src = 'https://cdn.jsdelivr.net/gh/dusterthefirst/Login-With-Discord/dist/lwd.js';
-		fontawesome.src = 'https://use.fontawesome.com/releases/v5.3.1/js/all.js';
-		bulma.href = 'https://unpkg.com/bulmaswatch/materia/bulmaswatch.min.css';
-		bulma.rel = "stylesheet";
-		bulma.type = 'text/css';
-
-		document.getElementsByTagName('head')[0].appendChild(bulma);
 		document.getElementsByTagName('head')[0].appendChild(script);
-		document.getElementsByTagName('head')[0].appendChild(fontawesome);
 	})
 
 	async function login() {
@@ -72,7 +62,7 @@
 	.is-purple { background-color: purple; color: white; }
 </style>
 
-<a class={clazz} on:click={login}>
+<a href="#!" class={clazz} on:click={(e) => {e.preventDefault(); login();}}>
 	<span class='icon'>
 		<i class='fab fa-discord fa-lg'></i>
     </span>

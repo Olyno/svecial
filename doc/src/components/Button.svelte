@@ -3,6 +3,7 @@
 
 	export let name;
 	export let props;
+	export let clazz;
     
 </script>
 
@@ -27,7 +28,8 @@
 		</div>
         <br>
         <h1 class="title">API</h1>
-        <br>
+		<p>Default class(es) of the button: <textarea class="textarea" cols="30" rows="1" readonly>{clazz}</textarea></p>
+		<br>
 		<table class="table is-striped is-fullwidth is-hoverable">
 			<thead>
 				<tr>

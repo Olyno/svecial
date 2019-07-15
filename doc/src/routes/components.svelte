@@ -80,26 +80,27 @@
 
 			<h1 class="title">Components</h1>
 			<br><br>
+			<h1 class="title">Any button doesn't load? Check your cookies and accept them!</h1>
+			<br><br>
 			
 			<div class="columns is-centered">
 				<div class="column">
 					<button class="button is-warning" open-modal="Google Button">Google Button</button>
-					<Button name="Google Button" props={GoogleButtonInfos}>
+					<Button name="Google Button" props={GoogleButtonInfos} clazz="google-signin-button">
 						<pre slot="pattern" class="pattern">&lt;GoogleButton appId="my app id" theme="dark" /></pre>
 						<GoogleButton theme='dark' isFlex=true />
 					</Button>
 				</div>
 				<div class="column">
 					<button class="button is-warning" open-modal="Facebook Button">Facebook Button</button>
-					<Button name="Facebook Button" props={FacebookButtonInfos}>
-						<h2>Facebook Button doesn't load? Check your cookies and accept cookies from facebook!</h2>
+					<Button name="Facebook Button" props={FacebookButtonInfos} clazz="fb-login-button">
 						<pre slot="pattern" class="pattern">&lt;FacebookButton appId="my app id" /></pre>
 						<FacebookButton appId="1000227316855149" />
 					</Button>
 				</div>
 				<div class="column">
 					<button class="button is-warning" open-modal="Discord Button">Discord Button</button>
-					<Button name="Discord Button" props={DiscordButtonInfos}>
+					<Button name="Discord Button" props={DiscordButtonInfos} clazz="discord-signin-button button">
 						<pre slot="pattern" class="pattern">&lt;DiscordButton appId="my app id" /></pre>
 						<DiscordButton appId="598678534596198410" redirect="http://localhost:3000/svecial/components" />
 					</Button>
