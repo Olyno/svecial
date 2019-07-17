@@ -3,10 +3,12 @@
   "version": "0.0.8",
   "description": "A list of social buttons with Svelte",
   "author": "Olyno",
-  "main": "src/index.js",
-  "svelte": "src/index.js",
+  "main": "src/dist/index.js",
+  "svelte": "src/dist/index.js",
+  "types": "src/dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish": "npm run build && npm publish",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,7 @@
     "url": "https://github.com/Olyno/svecial/issues"
   },
   "homepage": "https://github.com/Olyno/svecial#readme",
-  "dependencies": {}
+  "dependencies": {
+    "svelte": "^3.6.7"
+  }
 }

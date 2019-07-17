@@ -4,8 +4,8 @@
 	import Button from '../components/Button.svelte'
 
 	import { onMount } from 'svelte'
-	import { GoogleButton, DiscordButton, FacebookButton } from 'svecial'
-	import { GoogleButtonInfos, FacebookButtonInfos, DiscordButtonInfos } from './_buttonsInfos';
+	import { GoogleButton, DiscordButton, FacebookButton, GithubButton } from 'svecial'
+	import { GoogleButtonInfos, FacebookButtonInfos, DiscordButtonInfos, GithubButtonInfos } from './_buttonsInfos';
 
 	let elements;
 	let openModal;
@@ -101,8 +101,24 @@
 				<div class="column">
 					<button class="button is-warning" open-modal="Discord Button">Discord Button</button>
 					<Button name="Discord Button" props={DiscordButtonInfos} clazz="discord-signin-button button">
-						<pre slot="pattern" class="pattern">&lt;DiscordButton appId="my app id" /></pre>
-						<DiscordButton appId="598678534596198410" redirect="http://localhost:3000/svecial/components" />
+						<pre slot="pattern" class="pattern">&lt;DiscordButton appId="my app id" secret="my secret" /></pre>
+						<DiscordButton appId="598678534596198410" secret="WhTsZmD2hRWZ1LOSlq7MJ-XS8bKv9Kmk" redirect="http://localhost:3000/svecial/components" />
+					</Button>
+				</div>
+			</div>
+
+			<div class="columns is-centered">
+				<div class="column">
+					<button class="button is-warning" open-modal="Github Button">Github Button</button>
+					<Button name="Github Button" props={GithubButtonInfos} clazz="github-signin-button button">
+						<pre slot="pattern" class="pattern">&lt;Github appId="my app id" secret="my secret" /></pre>
+						<GithubButton appId="Iv1.89655f6cc09d9835" secret="7d2f500284dc57b5ba9d161916eb04f97a137ee4" redirect="https://olyno.github.io/svecial/components/"
+						
+							onLoginFailure={(error) => {
+								console.log(error)
+							} }
+
+						 />
 					</Button>
 				</div>
 			</div>

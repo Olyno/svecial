@@ -1,23 +1,25 @@
 <script>
 
-	// Documentation available here: https://discordapp.com/developers/docs/topics/oauth2
-
+	// Documentation available here: https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/
+	
 	import { onMount } from 'svelte';
-	import DiscordAuth from '../dist/oauth2/auth/DiscordAuth';
+	import GithubAuth from '../dist/oauth2/auth/GithubAuth';
 
 	export let appId;
 	export let secret;
-	export let scopes = 'identify';
+	export let scopes = '';
 	export let redirect = 'http://localhost:3000';
 	export let color = 'dark';
-	export let onLoginFailure = () => {console.log('Logged to discord with failure!')};
-	export let onLoginSuccess = () => {console.log('Logged to discord with success!')};
+	export let allow_signup = false;
+	export let onLoginFailure = () => {console.log('Logged to github with failure!')};
+	export let onLoginSuccess = () => {console.log('Logged to github with success!')};
 
-	const clazz = `discord-signin-button button is-${color}`;
+	const clazz = `github-signin-button button is-${color}`;
 	scopes = scopes.toLocaleLowerCase().replace(/\s/gmui, '');
+	allow_signup = `${allow_signup}`;
 
 	onMount(async () => {
-		const auth = new DiscordAuth('discord-signin-button', {
+		const auth = new GithubAuth('github-signin-button', {
 			client_id: appId,
 			client_secret: secret,
 			scopes: scopes.split(','),
@@ -47,7 +49,7 @@
 
 <a href="#!" class={clazz}>
 	<span class='icon'>
-		<i class='fab fa-discord fa-lg'></i>
+		<i class="fab fa-github"></i>
     </span>
     <span>Connexion</span>
 </a>

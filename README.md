@@ -9,7 +9,7 @@ Many projects have inspired me, in particular **Svelma**, a library of component
 
 All my sources are available in the components in question.
 
-I hate librairies with a lot of dependencies, so I did a librairy with just ``Svelte`` as dependency.
+I hate librairies with a lot of dependencies, so I did a librairy with just ``Svelte`` (logic) and ``axios`` (to make good requests) as dependency.
 
 # Quick Start
 

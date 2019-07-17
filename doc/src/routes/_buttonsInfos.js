@@ -138,10 +138,87 @@ export const FacebookButtonInfos = _default.concat([{
 
 export const DiscordButtonInfos = _default.concat([{
     props: 'scopes',
-    description: 'Scopes for your app, seperated with a comma, i.e "identify, connections"',
+    description: 'Scopes for your app, seperated with a comma, i.e "identity, connections"',
     type: 'string',
     values: ['identity', 'connections', 'guilds', 'email'],
     default: 'profile'
+}, {
+    props: 'redirect',
+    description: 'The redirect url of your app',
+    type: 'string',
+    values: ['-'],
+    default: 'http://localhost:3000'
+}, {
+    props: 'color',
+    description: 'The color of the button',
+    type: 'string',
+    values: [
+        'dark',
+        'light',
+        'black',
+        'pink',
+        'yellow',
+        'aqua',
+        'lightblue',
+        'lightgreen',
+        'brown',
+        'blue',
+        'gray',
+        'green',
+        'purple'
+    ],
+    default: 'dark'
+}, {
+    props: 'onLoginSuccess',
+    description: 'A function if the login is a success, take the user\'s informations in paramater',
+    type: 'Function',
+    values: ['-'],
+    default: '() => {console.log("Logged to discord with success!")}'
+}, {
+    props: 'onLoginFailure',
+    description: 'A function if the login is a failure, take the the user\'s informations in paramater',
+    type: 'Function',
+    values: ['-'],
+    default: '() => {console.log("Logged to discord with failure!")}'
+}])
+
+export const GithubButtonInfos = _default.concat([{
+    props: 'scopes',
+    description: 'Scopes for your app, seperated with a comma, i.e "repo, admin:repo_hook"',
+    type: 'string',
+    values: [
+        '(no scope)',
+        'repo',
+        'repo:status',
+        'repo_deployment',
+        'public_repo',
+        'repo:invite',
+        'admin:repo_hook',
+        'write:repo_hook',
+        'read:repo_hook',
+        'admin:org',
+        'write:org',
+        'read:org',
+        'admin:public_key',
+        'write:public_key',
+        'read:public_key',
+        'admin:org_hook',
+        'gist',
+        'notifications',
+        'user',
+        'read:user',
+        'user:email',
+        'user:follow',
+        'delete_repo',
+        'write:discussion',
+        'read:discussion',
+        'write:packages',
+        'read:packages',
+        'admin:gpg_key',
+        'write:gpg_key',
+        'read:gpg_key'
+    ],
+    default: ''
 }, {
     props: 'redirect',
     description: 'The redirect url of your app',
