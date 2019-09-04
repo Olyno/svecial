@@ -1,0 +1,20 @@
+# https://drone.io
+
+kind: pipeline
+type: docker
+name: default
+
+platform:
+  os: linux
+  arch: arm64
+
+trigger:
+  branch:
+    - master
+
+steps:
+  - name: Testing
+    image: node
+    commands:
+      - npm install
+      - npm test
