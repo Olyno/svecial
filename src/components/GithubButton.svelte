@@ -1,9 +1,7 @@
 <script>
-
-	// Documentation available here: https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/
 	
 	import { onMount } from 'svelte';
-	import GithubAuth from '../dist/oauth2/auth/GithubAuth';
+	import { GithubAuth } from 'oaun';
 
 	export let appId;
 	export let secret;
@@ -14,21 +12,25 @@
 	export let onLoginFailure = () => {console.log('Logged to github with failure!')};
 	export let onLoginSuccess = () => {console.log('Logged to github with success!')};
 
+	let auth;
 	const clazz = `github-signin-button button is-${color}`;
 	scopes = scopes.toLocaleLowerCase().replace(/\s/gmui, '');
-	allow_signup = `${allow_signup}`;
 
 	onMount(async () => {
-		const auth = new GithubAuth('github-signin-button', {
+		auth = new GithubAuth('github-signin-button', {
 			client_id: appId,
 			client_secret: secret,
 			scopes: scopes.split(','),
 			redirect_uri: redirect
 		})
-		auth.init()
+	})
+
+	async function login(e) {
+		e.preventDefault();
+		auth.login()
 			.then(user => onLoginSuccess(user))
 			.catch(error => onLoginFailure(error))
-	})
+	}
 	
 </script>
 
@@ -45,9 +47,10 @@
 	.is-gray { background-color: gray; color: white; }
 	.is-green { background-color: green; color: white; }
 	.is-purple { background-color: purple; color: white; }
+	.is-red { background-color: red; color: white; }
 </style>
 
-<a href="#!" class={clazz}>
+<a href="#!" class={clazz} on:click={login}>
 	<span class='icon'>
 		<i class="fab fa-github"></i>
     </span>

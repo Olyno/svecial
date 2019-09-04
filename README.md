@@ -2,6 +2,15 @@
 
 ![npm](https://img.shields.io/npm/v/svecial.svg?style=for-the-badge) ![](https://img.shields.io/npm/dw/svecial.svg?style=for-the-badge) ![](https://img.shields.io/github/license/Olyno/svecial.svg?style=for-the-badge)
 
+<details>
+  <summary>Builds</summary>
+  
+  ![AppVeyor](https://img.shields.io/appveyor/ci/Olyno/svecial?style=for-the-badge&label=Appveyor%20build)
+  ![Drone (cloud)](https://img.shields.io/drone/build/Olyno/svecial?style=for-the-badge&label=Drone%20build)
+  ![Travis (.org)](https://img.shields.io/travis/Olyno/svecial?label=Travis%20Build&style=for-the-badge)
+  
+</details>
+
 # Inspirations
 
 Svelte being one of the modern frameworks that I have hooked the most, and seeing no ongoing projects for social buttons, needing them personally, I set out to create what I needed, and at the same time share this work with other developers.
@@ -13,8 +22,14 @@ I hate librairies with a lot of dependencies, so I did a librairy with just ``Sv
 
 # Quick Start
 
+**NPM:**
 ```
-npm install --save svecial
+npm install --save-dev svecial
+```
+
+**YARN:**
+```
+yarn install --save-dev svecial
 ```
 
 Import components like:
@@ -22,6 +37,8 @@ Import components like:
 ```js
 import { GoogleButton } from 'svecial'
 ```
+
+A lot of buttons depend of [Bulma's framework](https://bulma.io) and [Font Awesome](https://fontawesome.com). Think to add them if you want to enjoy more this librairy! 
 
 # API
 

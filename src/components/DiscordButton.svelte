@@ -1,9 +1,7 @@
 <script>
 
-	// Documentation available here: https://discordapp.com/developers/docs/topics/oauth2
-
 	import { onMount } from 'svelte';
-	import DiscordAuth from '../dist/oauth2/auth/DiscordAuth';
+	import { DiscordAuth } from 'oaun';
 
 	export let appId;
 	export let secret;
@@ -13,20 +11,25 @@
 	export let onLoginFailure = () => {console.log('Logged to discord with failure!')};
 	export let onLoginSuccess = () => {console.log('Logged to discord with success!')};
 
+	let auth;
 	const clazz = `discord-signin-button button is-${color}`;
 	scopes = scopes.toLocaleLowerCase().replace(/\s/gmui, '');
 
 	onMount(async () => {
-		const auth = new DiscordAuth('discord-signin-button', {
+		auth = new DiscordAuth('discord-signin-button', {
 			client_id: appId,
 			client_secret: secret,
 			scopes: scopes.split(','),
 			redirect_uri: redirect
 		})
-		auth.init()
+	})
+
+	async function login(e) {
+		e.preventDefault();
+		auth.login()
 			.then(user => onLoginSuccess(user))
 			.catch(error => onLoginFailure(error))
-	})
+	}
 	
 </script>
 
@@ -43,9 +46,10 @@
 	.is-gray { background-color: gray; color: white; }
 	.is-green { background-color: green; color: white; }
 	.is-purple { background-color: purple; color: white; }
+	.is-red { background-color: red; color: white; }
 </style>
 
-<a href="#!" class={clazz}>
+<a href="#!" class={clazz} on:click={login}>
 	<span class='icon'>
 		<i class='fab fa-discord fa-lg'></i>
     </span>

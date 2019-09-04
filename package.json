@@ -2,32 +2,52 @@
   "name": "svecial",
   "version": "0.0.8",
   "description": "A list of social buttons with Svelte",
-  "author": "Olyno",
-  "main": "src/dist/index.js",
-  "svelte": "src/dist/index.js",
-  "types": "src/dist/index.d.ts",
+  "author": "Olyno <https://github.com/Olyno>",
+  "main": "src/index.js",
+  "svelte": "src/index.js",
   "scripts": {
-    "publish": "npm run build && npm publish",
-    "build": "tsc"
+    "test": "jest",
+    "storybook": "start-storybook",
+    "build": "node src/compile.js && rollup -c && build-storybook -c .storybook -o .out"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Olyno/svecial.git"
   },
   "keywords": [
+    "svecial",
     "svelte",
     "svelte.js",
     "sveltejs",
     "social",
     "button",
-    "buttons"
+    "buttons",
+    "oauth"
   ],
   "license": "GNU",
   "bugs": {
     "url": "https://github.com/Olyno/svecial/issues"
   },
   "homepage": "https://github.com/Olyno/svecial#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@fortawesome/fontawesome-free": "^5.10.2",
+    "@storybook/svelte": "^5.1.11",
+    "@storybook/theming": "^5.1.11",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "bulma": "^0.7.5",
+    "jest": "^24.9.0",
+    "rollup": "^1.11.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-svelte": "^5.0.0",
+    "svelte": "^3.0.0",
+    "svelte-jest": "^0.3.0",
+    "svelte-loader": "^2.13.6"
+  },
   "dependencies": {
-    "svelte": "^3.6.7"
+    "oaun": "^0.0.1"
   }
 }
