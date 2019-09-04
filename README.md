@@ -18,18 +18,18 @@ Many projects have inspired me, in particular **Svelma**, a library of component
 
 All my sources are available in the components in question.
 
-I hate librairies with a lot of dependencies, so I did a librairy with just ``Svelte`` (logic) and ``axios`` (to make good requests) as dependency.
+I hate librairies with a lot of dependencies, so I did a librairy with just ``oaun`` (to make the oauth system) as dependency.
 
 # Quick Start
 
 **NPM:**
 ```
-npm install --save-dev svecial
+npm install -D svecial
 ```
 
 **YARN:**
 ```
-yarn install --save-dev svecial
+yarn install -D svecial
 ```
 
 Import components like:
@@ -50,7 +50,7 @@ Each component/button has:
 
 Depending of which button, props are different. If we can customize easily the button, you should use ``color`` as props, else it should be ``theme``...
 
-**More informations about the api here:** https://olyno.github.io/svecial/components/
+**More informations about the api here:** https://olyno.github.io/svecial/
 
 ## SSR
 
@@ -84,10 +84,14 @@ Here is a plan of what Svecial should contain:
 
 # Contributing
 
- 1. Clone this repo: git clone https://github.com/Olyno/svecial.git
- 2. Install dependencies: ``cd docs & npm i``
- 3. Start the automated build and automated docs: ``npm run dev``
+ 1. Clone this repo: ``git clone https://github.com/Olyno/svecial.git``
+ 2. Install dependencies: ``npm i`` or ``yarn``
+ 3. Start the automated build and automated docs: ``npm run dev`` or ``yarn dev``
  4. Open url that console prints in your browser
+ 5. Edit and see components in the ``tests/stories`` dir. Please think to create tests in the ``tests/specs`` dir.
+
+The build is not automatically. When you create a new component, do ``npm run build`` or ``yarn build``.
+When you think you can deploy your code, just to ``npm run deploy`` or ``yarn deploy``.
 
 # License
 
