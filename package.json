@@ -1,6 +1,6 @@
 {
   "name": "svecial",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A list of social buttons with Svelte",
   "author": "Olyno <https://github.com/Olyno>",
   "main": "src/index.js",
