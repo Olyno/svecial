@@ -44,13 +44,11 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-svelte": "^5.0.0",
+    "svelte": "^3.0.0",
     "svelte-jest": "^0.3.0",
     "svelte-loader": "^2.13.6"
   },
   "dependencies": {
     "oaun": "^0.0.1"
-  },
-  "peerDependencies": {
-    "svelte": "^3.0.0"
   }
 }
