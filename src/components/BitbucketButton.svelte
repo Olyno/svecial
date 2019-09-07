@@ -8,6 +8,7 @@
 	export let scopes = 'account';
 	export let redirect = 'http://localhost:3000';
 	export let color = 'blue';
+	export let label = 'Connexion';
 	export let onLoginFailure = () => {console.log('Logged to bitbucket with failure!')};
 	export let onLoginSuccess = () => {console.log('Logged to bitbucket with success!')};
 
@@ -53,5 +54,5 @@
 	<span class='icon'>
 		<i class="fab fa-bitbucket"></i>
     </span>
-    <span>Connexion</span>
+    <span>{label}</span>
 </a>

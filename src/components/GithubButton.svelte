@@ -8,6 +8,7 @@
 	export let scopes = '';
 	export let redirect = 'http://localhost:3000';
 	export let color = 'dark';
+	export let label = 'Connexion';
 	export let allow_signup = false;
 	export let onLoginFailure = () => {console.log('Logged to github with failure!')};
 	export let onLoginSuccess = () => {console.log('Logged to github with success!')};
@@ -54,5 +55,5 @@
 	<span class='icon'>
 		<i class="fab fa-github"></i>
     </span>
-    <span>Connexion</span>
+    <span>{label}</span>
 </a>
