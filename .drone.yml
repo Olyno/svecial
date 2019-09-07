@@ -25,12 +25,12 @@ steps:
     commands:
       - yarn deploy 
 
-  - name: Deploy to gh-pages
-    image: plugins/gh-pages
-    settings:
-      username:
-        from_secret: github_username
-      password:
-        from_secret: github_password
-      pages_directory: .out/
+#  - name: Deploy to gh-pages
+#    image: plugins/gh-pages
+#    settings:
+#      username:
+#        from_secret: github_username
+#      password:
+#        from_secret: github_password
+#      pages_directory: .out/
     
