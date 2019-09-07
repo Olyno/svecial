@@ -27,14 +27,20 @@ steps:
   - name: Prepare gh-pages
     image: node
     commands:
-      - yarn deploy 
+      - yarn deploy
 
   - name: Deploy to gh-pages
     image: plugins/gh-pages
     settings:
-      username:
-        from_secret: github_username
-      password:
-        from_secret: github_password
-      pages_directory: .out/
+      github_email:
+        from_secret: github_email
+      github_token:
+        from_secret: github_token
+    commands:
+      - cd .out
+      - git init
+      - git config --global user.email "${github_email}"
+      - git config --global user.name "Olyno"
+      - git remote add origin https://Olyno:${github_token}@github.com/Olyno/SkEmail.git
+      - git push origin gh-pages -f
     
