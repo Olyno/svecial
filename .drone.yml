@@ -36,21 +36,21 @@ steps:
     commands:
       - yarn deploy
 
-  - name: Deploy to gh-pages
-    image: plugins/gh-pages
-    settings:
-      github_email:
-        from_secret: github_email
-      github_token:
-        from_secret: github_token
-    commands:
-      - cd .out
-      - git init
-      - git config --global user.email "${github_email}"
-      - git config --global user.name "Olyno"
-      - git checkout -B gh-pages
-      - git add .
-      - git remote add origin https://Olyno:${github_token}@github.com/Olyno/svecial.git
-      - git commit -am "GH-pages build"
-      - git push origin gh-pages -f
+#  - name: Deploy to gh-pages
+#    image: plugins/gh-pages
+#    settings:
+#      github_email:
+#        from_secret: github_email
+#      github_token:
+#        from_secret: github_token
+#    commands:
+#      - cd .out
+#      - git init
+#      - git config --global user.email "${github_email}"
+#      - git config --global user.name "Olyno"
+#      - git checkout -B gh-pages
+#      - git add .
+#      - git remote add origin https://Olyno:${github_token}@github.com/Olyno/svecial.git
+#      - git commit -am "GH-pages build"
+#      - git push origin gh-pages -f
     
