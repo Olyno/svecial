@@ -41,7 +41,7 @@ steps:
       - git init
       - git config --global user.email "${github_email}"
       - git config --global user.name "Olyno"
-      - git checkout gh-pages
+      - git switch -c gh-pages
       - git add .
       - git remote add origin https://Olyno:${github_token}@github.com/Olyno/svecial.git
       - git commit -am "GH-pages build"
