@@ -13,8 +13,24 @@ trigger:
     - master
 
 steps:
+
   - name: Testing
     image: node
     commands:
-      - npm install
-      - npm test
+      - yarn
+      - yarn test
+
+  - name: Prepare gh-pages
+    images: node
+    commands:
+      - yarn deploy 
+
+  - name: Deploy to gh-pages
+    image: plugins/gh-pages
+    settings:
+      username:
+        from_secret: github_username
+      password:
+        from_secret: github_password
+      pages_directory: .out/
+    

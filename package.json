@@ -9,7 +9,7 @@
     "test": "jest",
     "dev": "start-storybook",
     "deploy": "npm run build && build-storybook -c .storybook -o .out",
-    "build": "node src/compile.js && rollup -c"
+    "build": "node src/compile.js"
   },
   "repository": {
     "type": "git",
@@ -40,10 +40,6 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "bulma": "^0.7.5",
     "jest": "^24.9.0",
-    "rollup": "^1.11.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-svelte": "^5.0.0",
     "svelte": "^3.0.0",
     "svelte-jest": "^0.3.0",
     "svelte-loader": "^2.13.6"

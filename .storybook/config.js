@@ -8,7 +8,7 @@ function requireAll(requireContext) {
 }
 
 function loadStories() {
-	requireAll(require.context("..", true, /\.story\.js?$/));
+	requireAll(require.context('../doc', true, /\.story\.js?$/));
 }
 
 addParameters({
