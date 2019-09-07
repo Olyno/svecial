@@ -1,15 +1,6 @@
 # Svecial
 
-![npm](https://img.shields.io/npm/v/svecial.svg?style=for-the-badge) ![](https://img.shields.io/npm/dw/svecial.svg?style=for-the-badge) ![](https://img.shields.io/github/license/Olyno/svecial.svg?style=for-the-badge)
-
-<details>
-  <summary>Builds</summary>
-  
-  ![AppVeyor](https://img.shields.io/appveyor/ci/Olyno/svecial?style=for-the-badge&label=Appveyor%20build)
-  ![Drone (cloud)](https://img.shields.io/drone/build/Olyno/svecial?style=for-the-badge&label=Drone%20build)
-  ![Travis (.org)](https://img.shields.io/travis/Olyno/svecial?label=Travis%20Build&style=for-the-badge)
-  
-</details>
+![npm](https://img.shields.io/npm/v/svecial.svg?style=for-the-badge) ![](https://img.shields.io/npm/dw/svecial.svg?style=for-the-badge) ![](https://img.shields.io/github/license/Olyno/svecial.svg?style=for-the-badge) ![Drone (cloud)](https://img.shields.io/drone/build/Olyno/svecial?style=for-the-badge&label=Drone%20build)
 
 # Inspirations
 

@@ -14,10 +14,14 @@ trigger:
 
 steps:
 
-  - name: Testing
+  - name: Install dependencies
     image: node
     commands:
       - yarn
+
+  - name: Testing
+    image: node
+    commands:
       - yarn test
 
   - name: Prepare gh-pages
