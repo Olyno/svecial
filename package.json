@@ -35,7 +35,7 @@
     "@fortawesome/fontawesome-free": "^5.10.2",
     "@storybook/svelte": "^5.1.11",
     "@storybook/theming": "^5.1.11",
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "bulma": "^0.7.5",
